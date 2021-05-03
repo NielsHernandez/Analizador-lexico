@@ -1,0 +1,105 @@
+<!-- maquetacion y diseno, presentacion grafica para el usuario -->
+<!DOCTYPE html>
+<html>
+    <title>Analizador Lexico by Niels Hernandez</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <style>
+        body, html {
+            height: 100%;
+            font-family: "Inconsolata", sans-serif;
+        }
+
+        .bgimg {
+            background-position: center;
+            background-size: cover;
+            background-image: url("/w3images/coffeehouse.jpg");
+            min-height: 75%;
+        }
+
+        .menu {
+            display: none;
+        }
+    </style>
+    <body>
+
+        <!-- Links (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-row w3-padding w3-black">
+                <div class="w3-col s3">
+                    <a href="#" class="w3-button w3-block w3-black">Inicio</a>
+                </div>
+                <div class="w3-col s3">
+                    <a href="http://compiladores.nielsdev.live/" class="w3-button w3-block w3-black">Documentacion</a>
+            </div>
+        </div>
+
+
+
+
+        <!-- Contact/Area Container -->
+        <div class="w3-container" id="where" style="padding-bottom:62px;padding-top: 62px;">
+            <div class="w3-content" style="max-width:700px">
+
+
+
+                <p>Proyecto I</p>
+                <p>Compiladores</p>
+                <p>Autor: Niels Hernandez</p>
+                <p>Carnet: 7690-18-1574</p>
+
+
+                <form action="analizador" method="post">
+
+                    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Lenguaje=JavaScript" name="Name" disabled></p>
+
+
+
+                    <p>
+
+
+
+                        <label for="w3review">Escribe o pega el codigo A analizar:</label>
+
+                        <textarea class="w3-input w3-padding-16 w3-border" name="codigo" rows="14" cols="50"></textarea>
+
+
+                    </p>
+
+                    <p><button class="w3-button w3-black" type="submit">Analizar</button></p>
+
+                </form>
+
+
+            </div>
+        </div>
+
+
+
+        <!-- Footer -->
+        <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+            <p>Analizador Lexico<a target="_blank" class="w3-hover-text-green"> By Niels Hernandez</a></p>
+        </footer>
+
+        <script>
+            // Tabbed Menu
+            function openMenu(evt, menuName) {
+                var i, x, tablinks;
+                x = document.getElementsByClassName("menu");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < x.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+                }
+                document.getElementById(menuName).style.display = "block";
+                evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+            }
+            document.getElementById("myLink").click();
+        </script>
+
+    </body>
+</html>
